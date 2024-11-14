@@ -5,6 +5,7 @@
 // @description  Removes the annoying chat button from TradingView pages
 // @match        *.tradingview.com/*
 // @grant        none
+// @homepage     https://github.com/RainCat1998/tradingview-chat-remover
 // ==/UserScript==
 
 (function() {
