@@ -1,10 +1,12 @@
 // ==UserScript==
-// @name         Delete Tradingview Chat Button
+// @name         Remove TradingView Chat Button
 // @namespace    http://tampermonkey.net/
 // @version      0.2
-// @description  Delete Chat Button on Tradingview
+// @description  Removes the annoying chat button from TradingView pages
 // @match        *.tradingview.com/*
 // @grant        none
+// @homepage     https://github.com/RainCat1998/tradingview-chat-remover
+// @license MIT
 // ==/UserScript==
 
 (function() {
