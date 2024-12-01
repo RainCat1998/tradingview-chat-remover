@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Delete Tradingview Chat Button
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Delete Chat Button on Tradingview
 // @match        *.tradingview.com/*
 // @grant        none
