@@ -1,26 +1,25 @@
 // ==UserScript==
-// @name         Remove TradingView Chat Button
+// @name         Delete Tradingview Chat Button
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Removes the annoying chat button from TradingView pages
+// @description  Delete Chat Button on Tradingview
 // @match        *.tradingview.com/*
 // @grant        none
-// @homepage     https://github.com/RainCat1998/tradingview-chat-remover
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    // Create a MutationObserver to watch for changes in the DOM
+    // Using MutationObserver to observer DOM changes
     const observer = new MutationObserver(() => {
-        // Select the chat button using its data attribute
         const chatButton = document.querySelector('button[data-name="union_chats"]');
-        if (chatButton) {
-            chatButton.remove(); // Remove the chat button if found
-            observer.disconnect(); // Stop observing after the button is removed
+        const ideaButton = document.querySelector('button[data-name="ideas_stream"]');
+        if (chatButton && ideaButton) {
+            chatButton.remove(); // delete chat button
+            ideaButton.remove(); // delete ideas stream button
+            observer.disconnect(); // disconnect the observer
         }
     });
 
-    // Start observing the document body for changes
     observer.observe(document.body, { childList: true, subtree: true });
 })();
